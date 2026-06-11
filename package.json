@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "Professional Portfolio",
   "main": "dist/main.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "build": "nest build",
+    "vercel-build": "npm run build",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",

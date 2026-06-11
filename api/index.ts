@@ -6,7 +6,7 @@ import serverlessExpress from "@vendia/serverless-express";
 
 let cachedServer: any;
 
-async function bootstrapServer() {
+async function bootstrap() {
   const expressApp = express();
 
   const app = await NestFactory.create(
@@ -21,7 +21,7 @@ async function bootstrapServer() {
 
 export default async function handler(req: any, res: any) {
   if (!cachedServer) {
-    cachedServer = await bootstrapServer();
+    cachedServer = await bootstrap();
   }
   return cachedServer(req, res);
 }

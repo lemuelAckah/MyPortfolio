@@ -1,37 +1,15 @@
 {
-  "buildCommand": "echo 'No build step'",
-  "outputDirectory": "public",
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/((?!.*\\.(?:html|css|js|json|svg|png|jpg|jpeg|gif|ico|woff|woff2)$).*)",
-      "destination": "/index.html"
+      "src": "dist/main.js",
+      "use": "@vercel/node"
     }
   ],
-  "headers": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
-      ]
+      "src": "/(.*)",
+      "dest": "dist/main.js"
     }
   ]
 }

@@ -1,5 +1,4 @@
 {
-  "public": "public",
   "buildCommand": "echo 'No build step'",
   "outputDirectory": "public",
   "rewrites": [

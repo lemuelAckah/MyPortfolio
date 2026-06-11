@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "nest build",
-    "vercel-build": "npm run build",
+    "vercel-build": "echo \"No build required for static deployment\"",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",

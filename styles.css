@@ -1344,3 +1344,42 @@ textarea {
   gap: 8px;
   font-size: 0.9rem;
 }
+
+
+/* ===== Professional Responsive Navbar Upgrade ===== */
+.navbar{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.nav-links a{position:relative;padding:8px 0}
+.nav-links a::after{
+content:'';position:absolute;left:0;bottom:-4px;width:0;height:3px;
+background:linear-gradient(90deg,#6366f1,#8b5cf6);border-radius:999px;
+transition:width .35s ease;
+}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-links a:hover{transform:translateY(-2px)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer}
+.nav-toggle span{display:block;width:28px;height:3px;margin:5px 0;background:#fff;border-radius:10px}
+
+img{max-width:100%;height:auto}
+.hero .title{font-size:clamp(2.3rem,8vw,4.5rem)}
+.cta-buttons{flex-wrap:wrap}
+.card,.project-card{min-width:0}
+
+@media (max-width:768px){
+.nav-toggle{display:block}
+.nav-links{
+width:100%;
+display:none;
+flex-direction:column;
+text-align:center;
+padding:20px 0;
+}
+.nav-links.open{display:flex}
+.btn-cv-nav{width:100%;justify-content:center}
+.hero-content,.about-content{max-width:100%}
+.projects-grid{grid-template-columns:1fr}
+}
+
+@media (max-width:480px){
+.section{padding-left:16px;padding-right:16px}
+.cta-buttons .btn{width:100%;text-align:center}
+}
